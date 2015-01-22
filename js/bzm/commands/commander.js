@@ -1,15 +1,16 @@
 // module: (rather than a class)
-//		bzm/commands 
+//		bzm/commands
 define([
 	"dojo/_base/lang", // lang.hitch
 	"dojo/query",
 	"dojo/ready",
 	"dojo/_base/declare" // declare
 ], function(lang, query, ready, declare){
+//
 // fork from https://github.com/jbaron/cats under below license
 //
 // Copyright (c) JBaron.  All rights reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -20,8 +21,9 @@ define([
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+//
 //console.log("cmd-23");
-var _Commands = {		
+var _Commands = {
         /**
          * List of known commands
          */
@@ -109,18 +111,18 @@ console.log("cmd-106 init()");
 //console.log(key);
                 this.CMDS[key] = {
                     name: key,
-//                    label: qx.locale.Manager.tr(key),
+//                    label: qx.locale.Manager.tr(key),		// todo: locale/translation
                     label: key,
                     command: this.nop
                 };
             }
-//            Commands.EditorCommands.init(register);
-//            Commands.FileCommands.init(register);
-//            Commands.HelpCommands.init(register);
-//            Commands.ProjectCommands.init(register);
-//            Commands.IdeCommands.init(register);
+//            Commands.EditorCommands.init(register);		// todo
+//            Commands.FileCommands.init(register);		// todo
+//            Commands.HelpCommands.init(register);		// todo
+//            Commands.ProjectCommands.init(register);		// todo
+//            Commands.IdeCommands.init(register);		// todo
         }
 	};
-return _Commands;		
+return _Commands;
 });
-//# sourceURL=commander.js 
+//# sourceURL=commander.js

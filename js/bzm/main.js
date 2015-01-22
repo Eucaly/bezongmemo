@@ -29,7 +29,7 @@ require([
 	"bzm/ide",
     "dojo/domReady!"
 ], function (parser, dom, lang, BorderContainer, TabContainer, /*ContentPane,*/ AccordionContainer,
-        /*ModuleTreeModel, ModuleTree,*/ config, query, registry, MenuItem, Menu, array, MenuSeparator, 
+        /*ModuleTreeModel, ModuleTree,*/ config, query, registry, MenuItem, Menu, array, MenuSeparator,
         FilteringSelect, on, popup, djwindow, aspect, GUI, bzm, Ide) {
 console.log("main.js #30");
 
@@ -41,7 +41,7 @@ if (0) {	// todo, move to somewhere else
 // fork from https://github.com/jbaron/cats under below license
 //
 // Copyright (c) JBaron.  All rights reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -51,7 +51,7 @@ if (0) {	// todo, move to somewhere else
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
-// limitations under the License.        
+// limitations under the License.
         var args = GUI.App.argv;
         if (args.indexOf("--debug") === -1) {
             console.info = function () {
@@ -66,6 +66,10 @@ console.log("#44 location: ", document.location);
             Cats.IDE.debug = true;
         }
 */
+console.log("main.js #54");
+    var parsed = parser.parse();	// todo
+		var a=dijit.byId("content");
+console.log("#70 "+a);
 		IDE.init(document);
 //        Cats.IDE.init(app.getRoot());
 /*        var prjDir = determineProject(args);
@@ -76,9 +80,7 @@ console.log("#44 location: ", document.location);
             if (args.indexOf("--restore") > -1)
                 Cats.IDE.restorePreviousProjects();
         }
-*/		
-console.log("main.js #54");
-    var parsed = parser.parse();	// todo
+*/
 });
 if (0)
 {
@@ -90,4 +92,4 @@ if (0)
             Cats.IDE.console.error(err.stack);
     });
 }
-//# sourceURL=main.js 
+//# sourceURL=main.js

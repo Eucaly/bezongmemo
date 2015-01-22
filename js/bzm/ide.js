@@ -5,16 +5,21 @@ define([
 	"dojo/query",
 	"dojo/ready",
 	"dojo/_base/declare",
-	"bzm/commands/commander"
-], function(lang, query, ready, declare, Commands){
+	"dojo/dom-construct",
+	"dijit/layout/ContentPane",
+//	"dijit/byId",
+//	"dijit",
+	"bzm/commands/commander",
+	"bzm/gui/editor/htmleditor"
+], function(lang, query, ready, declare, domConstruct, ContentPane, /*idgetById,*/ Commands, HtmlEditor){
 
 console.log("ide-9");
-var _Ide = declare("bzm.ide", [], {
+var _Ide = declare("bzm.ide", [/*"dojo/Evented"*/], {
 
 // fork from https://github.com/jbaron/cats under below license
 //
 // Copyright (c) JBaron.  All rights reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -32,6 +37,17 @@ var _Ide = declare("bzm.ide", [], {
          */
 	init : function (rootDoc) {
             Commands.init();
+//			var node = domConstruct.create("div");
+			var a = dijit.byId("content");
+			var a1 = new ContentPane({title: "tab 2",
+		content: '<div id="programmatic2">This div will become an auto-expanding editor.</div>'});
+			a.addChild(a1);
+			var b = dojo.byId("programmatic2");
+//			a.addChild(node);
+            var myEditor = new HtmlEditor(b);
+//			a.addChild(myEditor);
+//	        myEditor.startup();
+
 //            var layouter = new Cats.Gui.Layout(rootDoc);
 //            layouter.layout(this);
 //            this.menuBar = new Cats.Gui.MenuBar();
@@ -39,6 +55,6 @@ var _Ide = declare("bzm.ide", [], {
 //            this.handleCloseWindow();
         }
 	});
-return _Ide;		
+return _Ide;
 });
-//# sourceURL=ide.js 
+//# sourceURL=ide.js
