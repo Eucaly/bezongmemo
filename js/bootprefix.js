@@ -34,6 +34,9 @@ dojoConfig = {
     },{
         name: "js",
         location: "./js"
+    },{
+        name: "bzm",
+        location: "./js/bzm"
     }],
-	deps: ["js/main"]
+	deps: ["js/bzm/main"]
 };
