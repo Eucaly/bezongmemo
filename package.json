@@ -1,0 +1,12 @@
+{
+    "main": "index.html",
+    "name": "beZongMemo",
+    "description": "beZong - organize your digital belongings",
+    "version": "0.0.1",
+    "window": {
+        "toolbar": true,
+        "resizable": true,
+        "width": 1024,
+        "height": 720
+    }
+}
