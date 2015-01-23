@@ -8,7 +8,7 @@ if (0) {	// todo, move to somewhere else
 // Configuration Object for Dojo Loader:
 dojoConfig = {
 	baseUrl: process.cwd(),		// TBD
-    async: 1, // We want to make sure we are using the "modern" loader
+//    async: 1, // We want to make sure we are using the "modern" loader
 	async:1, debug:1, noGlobals:0,
     hasCache: {
         "host-nwjs": 1, // Ensure we "force" the loader into Node.js mode
@@ -33,10 +33,10 @@ dojoConfig = {
         location: "./dojo/dojox"
     },{
         name: "js",
-        location: "./js"
+        location: "./src"
     },{
-        name: "bzm",
-        location: "./js/bzm"
+        name: "cats",
+        location: "./src/cats"
     }],
-	deps: ["js/bzm/main"]
+	deps: ["js/boot"]
 };
